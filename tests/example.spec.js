@@ -14,7 +14,7 @@ test('get started link', async ({ page }) => {
   await page.screenshot({ path: 'screenshot.png' });
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
-
+ await page.screenshot({ path: 'screenshot.png' });
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
